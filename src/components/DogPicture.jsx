@@ -13,7 +13,10 @@ const DogPicture = () => {
 
   return (
     <div>
-      <img src={imageUrl} alt='a dog' />
+      <img style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} src={imageUrl} alt='a dog' />
     </div>
   );
 };
