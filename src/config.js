@@ -1,4 +1,6 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
+import DogPicture from '../src/components/DogPicture'
+
 
 const config = {
   initialMessages: [createChatBotMessage(`Hi my name is Tessa!`), 
@@ -16,9 +18,12 @@ const config = {
       backgroundColor: '#5ccc9d',
     },
   },
-  state: {
-    myCustomProperty: 'Bikershorts',
-  },
+  widgets: [
+    {
+      widgetName: 'dogPicture',
+      widgetFunc: (props) => <DogPicture {...props} />,
+    },
+  ],
 };
 
 export default config;

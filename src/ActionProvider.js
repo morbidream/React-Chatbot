@@ -8,7 +8,11 @@ class ActionProvider {
     }
   
     handleHello() {
-      const message = createChatBotMessage('Hello. Nice to meet you.');
+      const message = createChatBotMessage("Hello. Nice to meet you. Here's a nice dog picture for you!", {
+        withAvatar: true,
+        delay: 800,
+        widget: 'dogPicture',
+      });
   
       this.setState((prev) => ({
         ...prev,
