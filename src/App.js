@@ -3,9 +3,9 @@ import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 import React, { useState } from 'react';
 import config from '../src/config';
-import MessageParser from '../src/MessageParser';
 import ActionProvider from '../src/ActionProvider';
 import avatar from '../src/assets/favicon.ico';
+import MessageParser from "./MessageParser";
 
 
 function App() {
