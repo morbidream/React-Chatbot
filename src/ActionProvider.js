@@ -8,15 +8,24 @@ class ActionProvider {
     }
   
     handleHello() {
-      const message = createChatBotMessage("Hello. Nice to meet you. Here's a nice dog picture for you!", {
+      const message = createChatBotMessage("Hello. Nice to meet you", {
         withAvatar: true,
-        delay: 800,
+        delay: 900,
+      });
+      const message2 = createChatBotMessage("Here's a nice dog picture for you!", {
+        withAvatar: true,
+        delay: 2000,
         widget: 'dogPicture',
       });
   
       this.setState((prev) => ({
         ...prev,
         messages: [...prev.messages, message],
+      }));
+
+      this.setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, message2],
       }));
     }
   }

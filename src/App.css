@@ -2,6 +2,22 @@
   text-align: center;
 }
 
+.App-button {
+  background-color: transparent;
+  border: none !important;
+  outline: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 103px;
+  left: 900px;
+  }
+
+.App-img {
+  width: 90px;
+  height: 90px;
+  margin-right: 13px;
+  margin-top: 3px
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

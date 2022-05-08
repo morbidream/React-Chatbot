@@ -1,5 +1,6 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
-import DogPicture from '../src/components/DogPicture'
+import DogPicture from '../src/components/DogPicture';
+import MyAvatar from '../src/components/MyAvatar';
 
 
 const config = {
@@ -12,10 +13,10 @@ const config = {
   botName: "Tessa",
   customStyles: {
     botMessageBox: {
-      backgroundColor: '#376B7E',
+      backgroundColor: '#5586AE',
     },
     chatButton: {
-      backgroundColor: '#5ccc9d',
+      backgroundColor: '#42A5F5',
     },
   },
   widgets: [
@@ -24,6 +25,10 @@ const config = {
       widgetFunc: (props) => <DogPicture {...props} />,
     },
   ],
+  customComponents: {
+   // Replaces the default bot avatar
+   botAvatar: (props) => <MyAvatar {...props} />,
+ },
 };
 
 export default config;
