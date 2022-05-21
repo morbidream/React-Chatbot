@@ -6,8 +6,14 @@ class MessageParser {
   
     parse(message) {
       console.log("You: ",message);
-      if (message.includes('hello')) {
-        this.actionProvider.handleHello();
+      if (message.includes('dog')) {
+        this.actionProvider.handleDog();
+      }
+      else if (message.includes('meme')) {
+        this.actionProvider.handleMeme();
+      }
+      else {
+        this.actionProvider.handleSorry();
       }
     }
   }

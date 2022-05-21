@@ -1,11 +1,12 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import DogPicture from '../src/components/DogPicture';
 import MyAvatar from '../src/components/MyAvatar';
+import Memes from './components/Memes';
 
 
 const config = {
   initialMessages: [createChatBotMessage(`Hi my name is Tessa!`), 
-  createChatBotMessage("say 'hello' 🤭", {
+  createChatBotMessage("say 'dog' or 'meme' 🤭", {
     withAvatar: true,
     delay: 1000,
     widget: "overview",
@@ -24,6 +25,10 @@ const config = {
       widgetName: 'dogPicture',
       widgetFunc: (props) => <DogPicture {...props} />,
     },
+    {
+      widgetName: 'Memes',
+      widgetFunc: (props) => <Memes {...props} />,
+    }
   ],
   customComponents: {
    // Replaces the default bot avatar
